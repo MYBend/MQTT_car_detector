@@ -1,0 +1,2 @@
+# MQTT_car_detector
+MQTT client that allow to collect the sensed data sent by an Arduino micro-controller and publish a summary of these data on a MQTT broker. These values represent the sound noise level sensed by a microphone sensor. The MQTT client publish the noise level corresponding to the average sensed sound noise level and maximum sound noise level recorded over the last 10 seconds with a frequency of sensing of 1 per second. The MQTT client should also publish the number of detected pulses (~ equivalent to the number of crossing vehicles). 
