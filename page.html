@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!--importing the paho mqtt labrary-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+  <!--importing chartjs for graphs-->
+  <script src="js/chart.js"></script>
+  <title>MQTT TP</title>
+</head>
+<body>
+
+<canvas id="myChart"  width="400" height="120"></canvas>
+<!--importing our mqtt js code to handle the mqtt client-->
+<script src="js/mqtt.js" type="text/javascript"></script>
+<div id="messages"></div>
+<div style="float:left">
+		<div>
+		<span><button onclick="MQTTconnect()">Connect</button></span> <!--when clicked call MQTTconnect() function that is in mqtt.js-->
+		</div>
+		<h1 style = "font-family:calibri,garamond,serif;font-size:14px;">Current : </h1>
+		<h1 id="avg" style = "font-family:calibri,garamond,serif;font-size:16px;">AVG : </h1>
+		<h1 id="max" style = "font-family:calibri,garamond,serif;font-size:16px;">MAX : </h1>
+		<h1 id="nbv" style = "font-family:calibri,garamond,serif;font-size:16px;">VEHICULES : </h1>
+		<h1 id="txt" style = "font-family:calibri,garamond,serif;font-size:16px;">STATUS</h1>
+</div>
+<div style="float:right">
+		<div style="float:left">
+		
+			<h1 style = "font-family:calibri,garamond,serif;font-size:16px;">History : </h1> <!--text area to show the history of max and avg of every 10 seconds since we are only concerned with this information -->
+			<textarea id="log" rows="9" cols="60" readonly></textarea>
+		</div>
+		<div style="float:right">
+			<h1 style = "font-family:calibri,garamond,serif;font-size:16px;">Events : </h1><!--text area to show the missed events while being offline with the broker-->
+			<textarea id="missed_events" rows="9" cols="60" readonly></textarea>
+		</div>
+</div>
+
+  
+</body>
+</html>
