@@ -16,7 +16,7 @@ MQTT client that allow to collect the sensed data sent by an Arduino micro-contr
 noise : where data and max and avg are sent
 noise/pulses: we use it to notify the client whether  a vehicule has passed
 noise/events: we use it to notify the broker about the important event when the connection between
-the client and the broker is broken(in are case the important data are: the connection attempts and the vehicules passed during this period
+the client and the broker is broken(in our case the important data are: the connection attempts and the vehicules passed during this period
 
 - the client is subscribed to noise/#
 
